@@ -535,6 +535,39 @@ class DatagenPerturbedTests(unittest.TestCase):
         self.assertIn("drg_mismatch_with_diagnoses", inpatient_categories)
         self.assertIn("duplicate_billing", outpatient_categories)
         self.assertIn("duplicate_billing", inpatient_categories)
+        self.assertNotIn("no_surprises_act_violation", outpatient_categories)
+        self.assertNotIn("network_status_misclassification", outpatient_categories)
+        self.assertNotIn("no_surprises_act_violation", inpatient_categories)
+        self.assertNotIn("network_status_misclassification", inpatient_categories)
+
+    def test_weighted_category_order_excludes_deprecated_categories(self) -> None:
+        names = {
+            entry.name
+            for entry in assignment.weighted_category_order(
+                "case-without-deprecated-categories",
+                7,
+            )
+        }
+        self.assertNotIn("no_surprises_act_violation", names)
+        self.assertNotIn("network_status_misclassification", names)
+
+    def test_category_feasible_rejects_deprecated_categories(self) -> None:
+        bill = make_bill(case_id="out")
+        aftercare = make_aftercare("out")
+        self.assertFalse(
+            assignment.category_feasible(
+                "no_surprises_act_violation",
+                bill,
+                aftercare_record=aftercare,
+            )
+        )
+        self.assertFalse(
+            assignment.category_feasible(
+                "network_status_misclassification",
+                bill,
+                aftercare_record=aftercare,
+            )
+        )
 
     def test_select_positive_case_ids_test_one(self) -> None:
         selected = assignment.select_positive_case_ids(
