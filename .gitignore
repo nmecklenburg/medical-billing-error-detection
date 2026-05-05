@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+build/
+dist/
+outputs/
+paper-ready-outputs/
+quarantine/
+.env
+.idea/*
+*.png
+*.pdf

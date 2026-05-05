@@ -1,0 +1,599 @@
+{
+  "report_schema_version": 2,
+  "generated_at": "2026-03-20T12:00:00Z",
+  "dataset_dir": "/home/nmecklenburg/develop/stanford/cs277/project/src/claim/samples",
+  "cases_evaluated": 2,
+  "judge_model": "sample-judge",
+  "dataset_validation": {
+    "manifest_status": "completed",
+    "total_case_count": 2,
+    "positive_case_count": 0,
+    "negative_case_count": 2,
+    "ground_truth_scope_counts": {
+      "clean": 2,
+      "itemized_positive": 0,
+      "bill_only_positive": 0
+    }
+  },
+  "models": [
+    {
+      "provider": "sample",
+      "model": "deterministic-no-dispute",
+      "cases_evaluated": 2,
+      "elapsed_seconds": 0.0,
+      "request_config": {
+        "answer_provider": "sample",
+        "answer_model": "deterministic-no-dispute",
+        "judge_model": "sample-judge",
+        "timeout_seconds": 0.0,
+        "max_workers": 1,
+        "judge_max_workers": 1,
+        "reasoning_effort": "minimal",
+        "sampling_controls": {
+          "answer": {
+            "transport": "fixture",
+            "temperature": 0.0
+          },
+          "typology_judge": {
+            "transport": "fixture",
+            "sampling_behavior": "deterministic"
+          }
+        }
+      },
+      "metrics": {
+        "funds_metrics": {
+          "recall_disputable_funds": 0.0,
+          "precision_disputable_funds": 0.0,
+          "disputable_funds_found": 0.0,
+          "disputable_funds_total": 0.0,
+          "flagged_funds_total": 0.0
+        },
+        "bill_metrics": {
+          "bill_recall": 0.0,
+          "bill_fpr": 0.0,
+          "bill_precision": 0.0,
+          "counts": {
+            "actual_positive_bills": 0,
+            "true_positive_bills": 0,
+            "actual_negative_bills": 2,
+            "false_positive_bills": 0,
+            "predicted_positive_bills": 0
+          }
+        },
+        "bill_only_positive_metrics": {
+          "bill_only_positive_recall": 0.0,
+          "counts": {
+            "actual_positive_bills": 0,
+            "predicted_positive_bills": 0,
+            "true_positive_bills": 0
+          }
+        },
+        "item_metrics": {
+          "item_recall": 0.0,
+          "item_precision": 0.0,
+          "item_f1": 0.0,
+          "item_accuracy": 1.0,
+          "counts": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 4,
+            "fn": 0
+          }
+        },
+        "typology_metrics": {
+          "strict_typology_accuracy": 0.0,
+          "typology_labels": [
+            "upcoding",
+            "unbundling",
+            "phantom_billing",
+            "mismatched_diagnosis",
+            "ignored_contractual_adjustment",
+            "duplicate_billing",
+            "no_surprises_act_violation",
+            "quantity_inflation",
+            "network_status_misclassification",
+            "wrong_patient_demographics",
+            "date_of_service_mismatch",
+            "drg_mismatch_with_diagnoses",
+            "revenue_code_inconsistent_with_procedure",
+            "physician_procedure_without_facility_support",
+            "facility_procedure_without_professional_support",
+            "wrong_cpt_for_inpatient_setting",
+            "other",
+            "missed"
+          ],
+          "typology_confusion_matrix": {
+            "upcoding": {
+              "upcoding": 0,
+              "unbundling": 0,
+              "phantom_billing": 0,
+              "mismatched_diagnosis": 0,
+              "ignored_contractual_adjustment": 0,
+              "duplicate_billing": 0,
+              "no_surprises_act_violation": 0,
+              "quantity_inflation": 0,
+              "network_status_misclassification": 0,
+              "wrong_patient_demographics": 0,
+              "date_of_service_mismatch": 0,
+              "drg_mismatch_with_diagnoses": 0,
+              "revenue_code_inconsistent_with_procedure": 0,
+              "physician_procedure_without_facility_support": 0,
+              "facility_procedure_without_professional_support": 0,
+              "wrong_cpt_for_inpatient_setting": 0,
+              "other": 0,
+              "missed": 0
+            },
+            "unbundling": {
+              "upcoding": 0,
+              "unbundling": 0,
+              "phantom_billing": 0,
+              "mismatched_diagnosis": 0,
+              "ignored_contractual_adjustment": 0,
+              "duplicate_billing": 0,
+              "no_surprises_act_violation": 0,
+              "quantity_inflation": 0,
+              "network_status_misclassification": 0,
+              "wrong_patient_demographics": 0,
+              "date_of_service_mismatch": 0,
+              "drg_mismatch_with_diagnoses": 0,
+              "revenue_code_inconsistent_with_procedure": 0,
+              "physician_procedure_without_facility_support": 0,
+              "facility_procedure_without_professional_support": 0,
+              "wrong_cpt_for_inpatient_setting": 0,
+              "other": 0,
+              "missed": 0
+            },
+            "phantom_billing": {
+              "upcoding": 0,
+              "unbundling": 0,
+              "phantom_billing": 0,
+              "mismatched_diagnosis": 0,
+              "ignored_contractual_adjustment": 0,
+              "duplicate_billing": 0,
+              "no_surprises_act_violation": 0,
+              "quantity_inflation": 0,
+              "network_status_misclassification": 0,
+              "wrong_patient_demographics": 0,
+              "date_of_service_mismatch": 0,
+              "drg_mismatch_with_diagnoses": 0,
+              "revenue_code_inconsistent_with_procedure": 0,
+              "physician_procedure_without_facility_support": 0,
+              "facility_procedure_without_professional_support": 0,
+              "wrong_cpt_for_inpatient_setting": 0,
+              "other": 0,
+              "missed": 0
+            },
+            "mismatched_diagnosis": {
+              "upcoding": 0,
+              "unbundling": 0,
+              "phantom_billing": 0,
+              "mismatched_diagnosis": 0,
+              "ignored_contractual_adjustment": 0,
+              "duplicate_billing": 0,
+              "no_surprises_act_violation": 0,
+              "quantity_inflation": 0,
+              "network_status_misclassification": 0,
+              "wrong_patient_demographics": 0,
+              "date_of_service_mismatch": 0,
+              "drg_mismatch_with_diagnoses": 0,
+              "revenue_code_inconsistent_with_procedure": 0,
+              "physician_procedure_without_facility_support": 0,
+              "facility_procedure_without_professional_support": 0,
+              "wrong_cpt_for_inpatient_setting": 0,
+              "other": 0,
+              "missed": 0
+            },
+            "ignored_contractual_adjustment": {
+              "upcoding": 0,
+              "unbundling": 0,
+              "phantom_billing": 0,
+              "mismatched_diagnosis": 0,
+              "ignored_contractual_adjustment": 0,
+              "duplicate_billing": 0,
+              "no_surprises_act_violation": 0,
+              "quantity_inflation": 0,
+              "network_status_misclassification": 0,
+              "wrong_patient_demographics": 0,
+              "date_of_service_mismatch": 0,
+              "drg_mismatch_with_diagnoses": 0,
+              "revenue_code_inconsistent_with_procedure": 0,
+              "physician_procedure_without_facility_support": 0,
+              "facility_procedure_without_professional_support": 0,
+              "wrong_cpt_for_inpatient_setting": 0,
+              "other": 0,
+              "missed": 0
+            },
+            "duplicate_billing": {
+              "upcoding": 0,
+              "unbundling": 0,
+              "phantom_billing": 0,
+              "mismatched_diagnosis": 0,
+              "ignored_contractual_adjustment": 0,
+              "duplicate_billing": 0,
+              "no_surprises_act_violation": 0,
+              "quantity_inflation": 0,
+              "network_status_misclassification": 0,
+              "wrong_patient_demographics": 0,
+              "date_of_service_mismatch": 0,
+              "drg_mismatch_with_diagnoses": 0,
+              "revenue_code_inconsistent_with_procedure": 0,
+              "physician_procedure_without_facility_support": 0,
+              "facility_procedure_without_professional_support": 0,
+              "wrong_cpt_for_inpatient_setting": 0,
+              "other": 0,
+              "missed": 0
+            },
+            "no_surprises_act_violation": {
+              "upcoding": 0,
+              "unbundling": 0,
+              "phantom_billing": 0,
+              "mismatched_diagnosis": 0,
+              "ignored_contractual_adjustment": 0,
+              "duplicate_billing": 0,
+              "no_surprises_act_violation": 0,
+              "quantity_inflation": 0,
+              "network_status_misclassification": 0,
+              "wrong_patient_demographics": 0,
+              "date_of_service_mismatch": 0,
+              "drg_mismatch_with_diagnoses": 0,
+              "revenue_code_inconsistent_with_procedure": 0,
+              "physician_procedure_without_facility_support": 0,
+              "facility_procedure_without_professional_support": 0,
+              "wrong_cpt_for_inpatient_setting": 0,
+              "other": 0,
+              "missed": 0
+            },
+            "quantity_inflation": {
+              "upcoding": 0,
+              "unbundling": 0,
+              "phantom_billing": 0,
+              "mismatched_diagnosis": 0,
+              "ignored_contractual_adjustment": 0,
+              "duplicate_billing": 0,
+              "no_surprises_act_violation": 0,
+              "quantity_inflation": 0,
+              "network_status_misclassification": 0,
+              "wrong_patient_demographics": 0,
+              "date_of_service_mismatch": 0,
+              "drg_mismatch_with_diagnoses": 0,
+              "revenue_code_inconsistent_with_procedure": 0,
+              "physician_procedure_without_facility_support": 0,
+              "facility_procedure_without_professional_support": 0,
+              "wrong_cpt_for_inpatient_setting": 0,
+              "other": 0,
+              "missed": 0
+            },
+            "network_status_misclassification": {
+              "upcoding": 0,
+              "unbundling": 0,
+              "phantom_billing": 0,
+              "mismatched_diagnosis": 0,
+              "ignored_contractual_adjustment": 0,
+              "duplicate_billing": 0,
+              "no_surprises_act_violation": 0,
+              "quantity_inflation": 0,
+              "network_status_misclassification": 0,
+              "wrong_patient_demographics": 0,
+              "date_of_service_mismatch": 0,
+              "drg_mismatch_with_diagnoses": 0,
+              "revenue_code_inconsistent_with_procedure": 0,
+              "physician_procedure_without_facility_support": 0,
+              "facility_procedure_without_professional_support": 0,
+              "wrong_cpt_for_inpatient_setting": 0,
+              "other": 0,
+              "missed": 0
+            },
+            "wrong_patient_demographics": {
+              "upcoding": 0,
+              "unbundling": 0,
+              "phantom_billing": 0,
+              "mismatched_diagnosis": 0,
+              "ignored_contractual_adjustment": 0,
+              "duplicate_billing": 0,
+              "no_surprises_act_violation": 0,
+              "quantity_inflation": 0,
+              "network_status_misclassification": 0,
+              "wrong_patient_demographics": 0,
+              "date_of_service_mismatch": 0,
+              "drg_mismatch_with_diagnoses": 0,
+              "revenue_code_inconsistent_with_procedure": 0,
+              "physician_procedure_without_facility_support": 0,
+              "facility_procedure_without_professional_support": 0,
+              "wrong_cpt_for_inpatient_setting": 0,
+              "other": 0,
+              "missed": 0
+            },
+            "date_of_service_mismatch": {
+              "upcoding": 0,
+              "unbundling": 0,
+              "phantom_billing": 0,
+              "mismatched_diagnosis": 0,
+              "ignored_contractual_adjustment": 0,
+              "duplicate_billing": 0,
+              "no_surprises_act_violation": 0,
+              "quantity_inflation": 0,
+              "network_status_misclassification": 0,
+              "wrong_patient_demographics": 0,
+              "date_of_service_mismatch": 0,
+              "drg_mismatch_with_diagnoses": 0,
+              "revenue_code_inconsistent_with_procedure": 0,
+              "physician_procedure_without_facility_support": 0,
+              "facility_procedure_without_professional_support": 0,
+              "wrong_cpt_for_inpatient_setting": 0,
+              "other": 0,
+              "missed": 0
+            },
+            "drg_mismatch_with_diagnoses": {
+              "upcoding": 0,
+              "unbundling": 0,
+              "phantom_billing": 0,
+              "mismatched_diagnosis": 0,
+              "ignored_contractual_adjustment": 0,
+              "duplicate_billing": 0,
+              "no_surprises_act_violation": 0,
+              "quantity_inflation": 0,
+              "network_status_misclassification": 0,
+              "wrong_patient_demographics": 0,
+              "date_of_service_mismatch": 0,
+              "drg_mismatch_with_diagnoses": 0,
+              "revenue_code_inconsistent_with_procedure": 0,
+              "physician_procedure_without_facility_support": 0,
+              "facility_procedure_without_professional_support": 0,
+              "wrong_cpt_for_inpatient_setting": 0,
+              "other": 0,
+              "missed": 0
+            },
+            "revenue_code_inconsistent_with_procedure": {
+              "upcoding": 0,
+              "unbundling": 0,
+              "phantom_billing": 0,
+              "mismatched_diagnosis": 0,
+              "ignored_contractual_adjustment": 0,
+              "duplicate_billing": 0,
+              "no_surprises_act_violation": 0,
+              "quantity_inflation": 0,
+              "network_status_misclassification": 0,
+              "wrong_patient_demographics": 0,
+              "date_of_service_mismatch": 0,
+              "drg_mismatch_with_diagnoses": 0,
+              "revenue_code_inconsistent_with_procedure": 0,
+              "physician_procedure_without_facility_support": 0,
+              "facility_procedure_without_professional_support": 0,
+              "wrong_cpt_for_inpatient_setting": 0,
+              "other": 0,
+              "missed": 0
+            },
+            "physician_procedure_without_facility_support": {
+              "upcoding": 0,
+              "unbundling": 0,
+              "phantom_billing": 0,
+              "mismatched_diagnosis": 0,
+              "ignored_contractual_adjustment": 0,
+              "duplicate_billing": 0,
+              "no_surprises_act_violation": 0,
+              "quantity_inflation": 0,
+              "network_status_misclassification": 0,
+              "wrong_patient_demographics": 0,
+              "date_of_service_mismatch": 0,
+              "drg_mismatch_with_diagnoses": 0,
+              "revenue_code_inconsistent_with_procedure": 0,
+              "physician_procedure_without_facility_support": 0,
+              "facility_procedure_without_professional_support": 0,
+              "wrong_cpt_for_inpatient_setting": 0,
+              "other": 0,
+              "missed": 0
+            },
+            "facility_procedure_without_professional_support": {
+              "upcoding": 0,
+              "unbundling": 0,
+              "phantom_billing": 0,
+              "mismatched_diagnosis": 0,
+              "ignored_contractual_adjustment": 0,
+              "duplicate_billing": 0,
+              "no_surprises_act_violation": 0,
+              "quantity_inflation": 0,
+              "network_status_misclassification": 0,
+              "wrong_patient_demographics": 0,
+              "date_of_service_mismatch": 0,
+              "drg_mismatch_with_diagnoses": 0,
+              "revenue_code_inconsistent_with_procedure": 0,
+              "physician_procedure_without_facility_support": 0,
+              "facility_procedure_without_professional_support": 0,
+              "wrong_cpt_for_inpatient_setting": 0,
+              "other": 0,
+              "missed": 0
+            },
+            "wrong_cpt_for_inpatient_setting": {
+              "upcoding": 0,
+              "unbundling": 0,
+              "phantom_billing": 0,
+              "mismatched_diagnosis": 0,
+              "ignored_contractual_adjustment": 0,
+              "duplicate_billing": 0,
+              "no_surprises_act_violation": 0,
+              "quantity_inflation": 0,
+              "network_status_misclassification": 0,
+              "wrong_patient_demographics": 0,
+              "date_of_service_mismatch": 0,
+              "drg_mismatch_with_diagnoses": 0,
+              "revenue_code_inconsistent_with_procedure": 0,
+              "physician_procedure_without_facility_support": 0,
+              "facility_procedure_without_professional_support": 0,
+              "wrong_cpt_for_inpatient_setting": 0,
+              "other": 0,
+              "missed": 0
+            }
+          },
+          "counts": {
+            "strict_typology_hits": 0,
+            "strict_typology_total": 0
+          }
+        },
+        "subgroup_metrics": {
+          "inpatient": {
+            "item_recall": 0.0,
+            "item_precision": 0.0,
+            "item_f1": 0.0,
+            "item_accuracy": 1.0,
+            "counts": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 2,
+              "fn": 0
+            },
+            "strict_typology_accuracy": 0.0
+          },
+          "outpatient": {
+            "item_recall": 0.0,
+            "item_precision": 0.0,
+            "item_f1": 0.0,
+            "item_accuracy": 1.0,
+            "counts": {
+              "tp": 0,
+              "fp": 0,
+              "tn": 2,
+              "fn": 0
+            },
+            "strict_typology_accuracy": 0.0
+          }
+        },
+        "contagion_metrics": {
+          "clean_item_fpr": 0.0,
+          "perturbed_item_fpr": 0.0,
+          "counts": {
+            "clean_bill_fp_items": 0,
+            "clean_bill_negative_items": 4,
+            "perturbed_bill_fp_items": 0,
+            "perturbed_bill_negative_items": 0
+          }
+        }
+      },
+      "usage": {
+        "prediction": {},
+        "typology": {}
+      },
+      "case_results": [
+        {
+          "case_id": "10E9296B40406771-outpatient-542172280982181",
+          "provider": "sample",
+          "model": "deterministic-no-dispute",
+          "encounter_regime": "outpatient",
+          "summary_decision": "no_dispute",
+          "ground_truth": {
+            "label": "negative",
+            "error_category": null,
+            "error_explanation": null,
+            "affected_line_ids": [],
+            "affected_component_ids": [],
+            "affected_target_ids": [],
+            "disputed_amount": 0.0,
+            "disputed_amount_basis": null,
+            "scope": "clean"
+          },
+          "scorable_items": [
+            {
+              "item_key": "line_item:10E9296B40406771-outpatient-542172280982181-line-1",
+              "item_id": "10E9296B40406771-outpatient-542172280982181-line-1",
+              "item_type": "line_item",
+              "encounter_regime": "outpatient",
+              "allowed_amount": 208.0,
+              "is_ground_truth_error": false
+            },
+            {
+              "item_key": "line_item:10E9296B40406771-outpatient-542172280982181-line-2",
+              "item_id": "10E9296B40406771-outpatient-542172280982181-line-2",
+              "item_type": "line_item",
+              "encounter_regime": "outpatient",
+              "allowed_amount": 17.0,
+              "is_ground_truth_error": false
+            }
+          ],
+          "predicted_items": [],
+          "visible_line_id_map": {},
+          "visible_component_id_map": {},
+          "prediction_artifact": {
+            "prompt": "",
+            "raw_payload": {
+              "summary_decision": "no_dispute",
+              "overall_explanation": "Sample outpatient bill snapshot with no injected billing error.",
+              "disputed_items": []
+            },
+            "normalized_payload": {
+              "summary_decision": "no_dispute",
+              "overall_explanation": "Sample outpatient bill snapshot with no injected billing error.",
+              "disputed_items": [],
+              "disputed_line_items": []
+            },
+            "usage": {}
+          },
+          "typology_judgments": [],
+          "case_usage": {
+            "prediction": {},
+            "typology": {}
+          },
+          "aftercare_summary_title": "After-Visit Summary \u2014 Outpatient Visit (Knee Osteoarthritis)"
+        },
+        {
+          "case_id": "C702A3D7566EB137-inpatient-196141177018320",
+          "provider": "sample",
+          "model": "deterministic-no-dispute",
+          "encounter_regime": "inpatient",
+          "summary_decision": "no_dispute",
+          "ground_truth": {
+            "label": "negative",
+            "error_category": null,
+            "error_explanation": null,
+            "affected_line_ids": [],
+            "affected_component_ids": [],
+            "affected_target_ids": [],
+            "disputed_amount": 0.0,
+            "disputed_amount_basis": null,
+            "scope": "clean"
+          },
+          "scorable_items": [
+            {
+              "item_key": "line_item:C702A3D7566EB137-inpatient-196141177018320-line-1",
+              "item_id": "C702A3D7566EB137-inpatient-196141177018320-line-1",
+              "item_type": "line_item",
+              "encounter_regime": "inpatient",
+              "allowed_amount": 14867.41,
+              "is_ground_truth_error": false
+            },
+            {
+              "item_key": "case_component:C702A3D7566EB137-inpatient-196141177018320-component-1",
+              "item_id": "C702A3D7566EB137-inpatient-196141177018320-component-1",
+              "item_type": "case_component",
+              "encounter_regime": "inpatient",
+              "allowed_amount": 38686.36,
+              "is_ground_truth_error": false
+            }
+          ],
+          "predicted_items": [],
+          "visible_line_id_map": {},
+          "visible_component_id_map": {},
+          "prediction_artifact": {
+            "prompt": "",
+            "raw_payload": {
+              "summary_decision": "no_dispute",
+              "overall_explanation": "Sample inpatient bill snapshot with no injected billing error.",
+              "disputed_items": []
+            },
+            "normalized_payload": {
+              "summary_decision": "no_dispute",
+              "overall_explanation": "Sample inpatient bill snapshot with no injected billing error.",
+              "disputed_items": [],
+              "disputed_line_items": []
+            },
+            "usage": {}
+          },
+          "typology_judgments": [],
+          "case_usage": {
+            "prediction": {},
+            "typology": {}
+          },
+          "aftercare_summary_title": "After-Visit Summary \u2014 Partial Hip Replacement (Inpatient)"
+        }
+      ]
+    }
+  ]
+}

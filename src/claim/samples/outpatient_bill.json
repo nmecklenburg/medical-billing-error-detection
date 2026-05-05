@@ -1,0 +1,360 @@
+{
+  "case_id": "10E9296B40406771-outpatient-542172280982181",
+  "encounter_regime": "outpatient",
+  "schema_version": 1,
+  "generated_at": "2026-05-04T12:30:15Z",
+  "source_encounter": {
+    "cluster_id": "10E9296B40406771-outpatient-542172280982181",
+    "sample_number": 1,
+    "encounter": {
+      "anchor_claim_id": "542172280982181",
+      "anchor_claim_type": "outpatient",
+      "carrier_match_window_days": 0,
+      "from_date": "2019-12-27",
+      "thru_date": "2019-12-27"
+    },
+    "summary": {
+      "carrier_line_item_count": 0,
+      "claim_types_present": [
+        "outpatient"
+      ],
+      "diagnosis_code_count": 1,
+      "has_carrier_claim": false,
+      "has_facility_claim": true,
+      "procedure_code_count": 3,
+      "unique_diagnosis_code_count": 1,
+      "unique_hcpcs_cpt_code_count": 2,
+      "unique_icd9_procedure_code_count": 0
+    },
+    "claim_types_present": [
+      "outpatient"
+    ]
+  },
+  "patient": {
+    "desynpuf_id": "10E9296B40406771",
+    "birth_date": "1950-11-01",
+    "age_at_encounter": 69,
+    "sex_code": "2",
+    "race_code": "3",
+    "state_abbrev": "TX",
+    "county_fips": "48085",
+    "county_name": "COLLIN",
+    "state_name": "TEXAS"
+  },
+  "facility": {
+    "hospital_name": "Baylor Scott & White Medical Center - Frisco",
+    "npi": null,
+    "address": "5601 Warren Pkwy, Frisco, TX 75034",
+    "zip_code": "75034",
+    "state": "TX",
+    "city": "Frisco",
+    "county_name": null,
+    "county_fips": null,
+    "selection_provenance": {
+      "candidate_count": 636,
+      "query_mode": "directory_zip",
+      "cache_hit": false,
+      "trilliant_source_mode": "public_directory",
+      "hospital_directory_id": "baylor_scott_white_medical_center_frisco-83ce9",
+      "hospital_page_url": "https://oria-data.trillianthealth.com/hospital/baylor_scott_white_medical_center_frisco-83ce9",
+      "duckdb_url": "https://oria-data.trillianthealth.com/data/20260109/completed/baylor_scott_white_medical_center_frisco-83ce9/baylor_scott_white_medical_center_frisco-83ce9_parsed.duckdb",
+      "selection_strategy": "rate_coverage",
+      "quoted_code_coverage": 2,
+      "selection_probe_count": 5,
+      "selection_probe_limit": 8,
+      "selection_probe_rank": 5,
+      "selection_stage_candidate_count": 26,
+      "drg_quote_count": 0,
+      "other_anchor_quote_count": 0,
+      "service_quote_count": 2,
+      "total_quote_count": 2,
+      "selection_score": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "geographic_stage": "zip",
+      "specialty_filter_active": true,
+      "same_state_unfiltered_fallback_invoked": false
+    }
+  },
+  "payer_scenario": {
+    "scenario": "in_network",
+    "payer_name": "Blue Cross Blue Shield",
+    "insurance_coverage_ratio": 0.8
+  },
+  "diagnoses": [
+    {
+      "source_icd9_code": "71824",
+      "source_occurrences": [
+        {
+          "source_claim_type": "outpatient",
+          "source_claim_id": "542172280982181",
+          "source_field": "ICD9_DGNS_CD_1",
+          "position": 1
+        }
+      ],
+      "selected_icd10_code": "M179",
+      "icd10_mappings": [
+        {
+          "code": "M179",
+          "description": "Osteoarthritis (degenerative \u2018wear-and-tear\u2019 arthritis) of the knee, unspecified side or type."
+        }
+      ],
+      "description": "Osteoarthritis (degenerative \u2018wear-and-tear\u2019 arthritis) of the knee, unspecified side or type."
+    }
+  ],
+  "line_items": [
+    {
+      "line_id": "10E9296B40406771-outpatient-542172280982181-line-1",
+      "billing_code": "99212",
+      "code_system": "HCPCS/CPT",
+      "description": "URG2 LEVEL 2 ESTABLISHED PT",
+      "service_date": "2019-12-27",
+      "quantity": 1,
+      "support_status": "raw_supported",
+      "billing_side_hint": "professional",
+      "claim_class": "carrier",
+      "source_claim_type": "carrier",
+      "raw_source_claim_type": "outpatient",
+      "source_claim_id": "542172280982181",
+      "source_field": "HCPCS_CD_2",
+      "source_line_number": 2,
+      "pricing_provenance": {
+        "lookup_level": "hospital_payer",
+        "payer_name": "Blue Cross Blue Shield",
+        "row_count": 1,
+        "identity_filter": null,
+        "state_value": null,
+        "baseline_amount": null,
+        "source_allowed_amount": null,
+        "floor_amount": null,
+        "floor_applied": null,
+        "source_observed_field": null,
+        "hospital_count": null,
+        "supporting_row_count": null,
+        "prior_lookup_scope": null,
+        "prior_hospital_scan_count": null,
+        "prior_hospital_scan_cap": null,
+        "prior_cache_status": null,
+        "estimate_basis": null,
+        "estimate_support_line_count": null,
+        "estimate_charge_field": null,
+        "estimate_ratio": null,
+        "estimate_scope": null,
+        "estimate_source_hospital_id": null,
+        "estimate_source_hospital_name": null,
+        "estimate_source_lookup_level": null
+      },
+      "accounting": {
+        "billed_charge": 415.68,
+        "contractual_adjustment": 207.68,
+        "allowed_amount": 208.0,
+        "insurance_paid": 166.4,
+        "patient_responsibility": 41.6
+      }
+    },
+    {
+      "line_id": "10E9296B40406771-outpatient-542172280982181-line-2",
+      "billing_code": "36415",
+      "code_system": "HCPCS/CPT",
+      "description": "Routine blood draw from a vein (standard venipuncture) to collect samples for lab tests.",
+      "service_date": "2019-12-27",
+      "quantity": 1,
+      "support_status": "raw_supported",
+      "billing_side_hint": "professional",
+      "claim_class": "carrier",
+      "source_claim_type": "carrier",
+      "raw_source_claim_type": "outpatient",
+      "source_claim_id": "542172280982181",
+      "source_field": "HCPCS_CD_1",
+      "source_line_number": 1,
+      "pricing_provenance": {
+        "lookup_level": "hospital_payer",
+        "payer_name": "Blue Cross Blue Shield",
+        "row_count": 2,
+        "identity_filter": null,
+        "state_value": null,
+        "baseline_amount": null,
+        "source_allowed_amount": null,
+        "floor_amount": null,
+        "floor_applied": null,
+        "source_observed_field": null,
+        "hospital_count": null,
+        "supporting_row_count": null,
+        "prior_lookup_scope": null,
+        "prior_hospital_scan_count": null,
+        "prior_hospital_scan_cap": null,
+        "prior_cache_status": null,
+        "estimate_basis": null,
+        "estimate_support_line_count": null,
+        "estimate_charge_field": null,
+        "estimate_ratio": null,
+        "estimate_scope": null,
+        "estimate_source_hospital_id": null,
+        "estimate_source_hospital_name": null,
+        "estimate_source_lookup_level": null
+      },
+      "accounting": {
+        "billed_charge": 26.28,
+        "contractual_adjustment": 9.28,
+        "allowed_amount": 17.0,
+        "insurance_paid": 13.6,
+        "patient_responsibility": 3.4
+      }
+    }
+  ],
+  "case_components": [],
+  "bill_totals": {
+    "line_item_count": 2,
+    "billed_charge": 441.96,
+    "contractual_adjustment": 216.96,
+    "allowed_amount": 225.0,
+    "insurance_paid": 180.0,
+    "patient_responsibility": 45.0
+  },
+  "provenance": {
+    "reference_sources": {
+      "ssa_fips": "https://data.nber.org/ssa-fips-state-county-crosswalk/2024/ssa_fips_state_county_2024.csv"
+    },
+    "date_shift": {
+      "applied": true,
+      "years": 11
+    },
+    "cluster_generation": {
+      "model": "openai:gpt-5-mini",
+      "primary_clinical_direction": "Outpatient evaluation for knee joint disorder (degenerative knee/osteoarthritis) with routine office visit and venipuncture for labs.",
+      "clinical_direction_rationale": "ICD-9 code 718.24 maps to a knee joint disorder; the appropriate ICD-10 mapping for unspecified knee osteoarthritis is M17.9. The procedure cluster contains an established patient office visit (99212) and venipuncture (36415), consistent with a low-complexity outpatient visit for knee pain/OA with basic labs.",
+      "input_code_cluster": {
+        "diagnoses": [
+          {
+            "code_system": "ICD9",
+            "code": "71824",
+            "occurrence_count": 1,
+            "source_claim_types": [
+              "outpatient"
+            ]
+          }
+        ],
+        "procedures": [
+          {
+            "code_system": "HCPCS/CPT",
+            "code": "36415",
+            "occurrence_count": 1,
+            "source_claim_types": [
+              "outpatient"
+            ]
+          },
+          {
+            "code_system": "HCPCS/CPT",
+            "code": "99212",
+            "occurrence_count": 2,
+            "source_claim_types": [
+              "outpatient"
+            ]
+          }
+        ]
+      },
+      "retained_input_codes": [
+        {
+          "code_system": "ICD9",
+          "code": "71824",
+          "reason": "Original diagnosis code referencing a knee joint disorder; retained as supporting source and mapped to ICD-10 M17.9.",
+          "occurrence_count": 1,
+          "source_claim_types": [
+            "outpatient"
+          ]
+        },
+        {
+          "code_system": "HCPCS/CPT",
+          "code": "36415",
+          "reason": "Venipuncture for laboratory testing \u2014 commonly billed during outpatient evaluation and consistent with the visit.",
+          "occurrence_count": 1,
+          "source_claim_types": [
+            "outpatient"
+          ]
+        },
+        {
+          "code_system": "HCPCS/CPT",
+          "code": "99212",
+          "reason": "Office established patient visit for low-complexity evaluation \u2014 fits outpatient clinic visit for knee complaint.",
+          "occurrence_count": 2,
+          "source_claim_types": [
+            "outpatient"
+          ]
+        }
+      ],
+      "filtered_input_codes": [],
+      "generated_cluster": {
+        "diagnosis_codes": [
+          "M179"
+        ],
+        "billing_codes": [
+          "99212",
+          "36415"
+        ],
+        "augmented_diagnosis_codes": [],
+        "augmented_billing_codes": []
+      }
+    },
+    "trilliant_schema": {
+      "hospital_table": "public_search_index",
+      "rate_table": "standard_charge_details",
+      "hospital_name_column": "hospital_name",
+      "hospital_npi_column": null,
+      "hospital_zip_column": "hospital_zip",
+      "hospital_state_column": "hospital_state",
+      "hospital_county_name_column": "hospital_county_name",
+      "hospital_county_fips_column": "hospital_county_fips",
+      "hospital_address_columns": [
+        "hospital_address"
+      ],
+      "hospital_identity_columns": [
+        "hospital_directory_id"
+      ],
+      "rate_billing_code_column": "billing_code",
+      "rate_payer_column": "payer_name",
+      "rate_negotiated_rate_column": "estimated_amount",
+      "rate_gross_charge_column": "gross_charge",
+      "rate_state_column": null,
+      "rate_identity_columns": [
+        "hospital_directory_id"
+      ],
+      "source_mode": "public_directory",
+      "rate_code_columns": [
+        "cpt",
+        "hcpcs"
+      ],
+      "rate_description_column": "description",
+      "rate_standard_dollar_column": "standard_charge_dollar",
+      "rate_percentage_column": "standard_charge_percentage",
+      "rate_estimated_amount_column": "estimated_amount",
+      "rate_minimum_column": "minimum",
+      "rate_maximum_column": "maximum",
+      "rate_median_amount_column": "median_amount"
+    },
+    "pricing": {
+      "billed_charge_multiplier": 1.35,
+      "source_medicare_multiplier": 2.5,
+      "max_quote_amount": 10000000.0,
+      "rate_cache_hits": 0,
+      "rate_cache_misses": 2,
+      "trilliant_source_mode": "public_directory"
+    }
+  },
+  "evaluation_metadata": {
+    "label": "negative",
+    "error_category": null,
+    "error_explanation": null,
+    "disputed_amount": 0.0,
+    "disputed_amount_basis": null,
+    "assignment_weight": 0.0,
+    "assignment_result": "negative",
+    "downgrade_reason": null,
+    "affected_line_ids": [],
+    "affected_component_ids": [],
+    "affected_target_ids": [],
+    "affected_impact_group_ids": []
+  }
+}

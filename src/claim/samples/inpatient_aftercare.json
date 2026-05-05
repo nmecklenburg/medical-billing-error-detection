@@ -1,0 +1,45 @@
+{
+  "case_id": "C702A3D7566EB137-inpatient-196141177018320",
+  "generated_at": "2026-05-04T19:50:21Z",
+  "model": "openai:gpt-5-mini",
+  "summary": {
+    "document_title": "After-Visit Summary \u2014 Partial Hip Replacement (Inpatient)",
+    "encounter_overview": "You were admitted to Iowa Specialty Hospital Clarion from 2021-10-03 to 2021-10-07 for treatment of a broken right femoral neck (top of the thigh bone). During this stay you had a partial hip replacement. You also had anemia related to recent blood loss that was managed while you were in the hospital. Your hospital stay was uncomplicated and you are being discharged home with instructions to support healing and recovery.",
+    "diagnoses": [
+      "Closed fracture of the right femoral neck (initial encounter)",
+      "Acute post-hemorrhagic anemia (severe anemia after recent blood loss)",
+      "Initial visit following an accidental fall"
+    ],
+    "services_received": [
+      "Partial (hemi) hip replacement surgery on 2021-10-03",
+      "Inpatient medical care and monitoring for anemia and recovery",
+      "Postoperative nursing care, wound care, and physical therapy evaluation"
+    ],
+    "home_care_instructions": [
+      "Activity: Follow weight-bearing and activity instructions given by your surgeon and physical therapist. Use any recommended walking aids (walker, crutches) until your provider says it is safe to progress.",
+      "Wound care: Keep the incision clean and dry. Follow the specific dressing change instructions you were given. Do not soak the incision (no baths or swimming) until cleared by your surgeon.",
+      "Medication: Take all prescribed medicines exactly as directed. This may include pain medicine, and any medicines to help with anemia or prevent infection or blood clots. If you were given new medicines, follow the written medication list you received.",
+      "Pain control: Use your prescribed pain medicines as directed. Ice the area (if advised) for short periods to help with swelling and discomfort.",
+      "Blood clot prevention: Follow instructions for blood clot prevention, which may include taking prescribed blood thinner, doing ankle pumps and leg exercises, wearing compression stockings, and walking regularly as tolerated.",
+      "Diet and hydration: Eat a balanced diet and drink plenty of fluids. If your provider prescribed iron, vitamins, or other supplements for anemia, take them as directed.",
+      "Rest and gradual return to activities: Plan for gradual increases in activity. Avoid heavy lifting, twisting, or strenuous activity until your surgeon clears you.",
+      "Home safety: Make your home safe to prevent falls\u2014remove loose rugs, keep pathways clear, and have items you use often within reach."
+    ],
+    "follow_up_actions": [
+      "Orthopedic surgeon appointment: Schedule follow-up with your surgeon within 1\u20132 weeks after discharge (or sooner if instructed).",
+      "Primary care follow-up: See your primary care provider for ongoing management of anemia and overall recovery as directed.",
+      "Physical therapy: Attend outpatient physical therapy or follow the home exercise program given by your therapist to regain strength and mobility.",
+      "Wound check: Have your incision inspected at the first postoperative visit or sooner if you notice problems.",
+      "Medication review: Review all prescriptions and any new medications with your pharmacist or provider if you have questions or side effects."
+    ],
+    "warning_signs": [
+      "Fever of 100.4\u00b0F (38\u00b0C) or higher, or chills",
+      "Increasing redness, swelling, warmth, or foul-smelling drainage from the surgical incision",
+      "Sudden increase in pain not relieved by your prescribed pain medicine",
+      "New numbness or weakness in your leg or foot",
+      "Shortness of breath, chest pain, rapid heartbeat, or coughing up blood (seek emergency care immediately)",
+      "Sudden lightheadedness, fainting, or severe weakness",
+      "Excessive bleeding or signs of new or worsening anemia such as extreme tiredness, dizziness, or paler skin"
+    ]
+  }
+}

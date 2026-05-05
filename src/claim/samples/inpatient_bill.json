@@ -1,0 +1,610 @@
+{
+  "case_id": "C702A3D7566EB137-inpatient-196141177018320",
+  "encounter_regime": "inpatient",
+  "schema_version": 1,
+  "generated_at": "2026-05-04T19:41:08Z",
+  "source_encounter": {
+    "cluster_id": "C702A3D7566EB137-inpatient-196141177018320",
+    "sample_number": 1,
+    "encounter": {
+      "anchor_claim_id": "196141177018320",
+      "anchor_claim_type": "inpatient",
+      "carrier_match_window_days": 0,
+      "from_date": "2021-10-03",
+      "thru_date": "2021-10-07"
+    },
+    "summary": {
+      "carrier_line_item_count": 0,
+      "claim_types_present": [
+        "inpatient"
+      ],
+      "diagnosis_code_count": 10,
+      "has_carrier_claim": false,
+      "has_facility_claim": true,
+      "procedure_code_count": 2,
+      "unique_diagnosis_code_count": 10,
+      "unique_hcpcs_cpt_code_count": 0,
+      "unique_icd9_procedure_code_count": 2
+    },
+    "claim_types_present": [
+      "inpatient"
+    ]
+  },
+  "patient": {
+    "desynpuf_id": "C702A3D7566EB137",
+    "birth_date": "1978-08-01",
+    "age_at_encounter": 43,
+    "sex_code": "2",
+    "race_code": "1",
+    "state_abbrev": "IA",
+    "county_fips": "19061",
+    "county_name": "DUBUQUE",
+    "state_name": "IOWA"
+  },
+  "facility": {
+    "hospital_name": "Iowa Specialty Hospital Clarion",
+    "npi": null,
+    "address": "1316 S Main St Clarion IA 50525",
+    "zip_code": "50525",
+    "state": "IA",
+    "city": null,
+    "county_name": null,
+    "county_fips": null,
+    "selection_provenance": {
+      "candidate_count": 91,
+      "query_mode": "cached",
+      "cache_hit": true,
+      "trilliant_source_mode": "public_directory",
+      "hospital_directory_id": "iowa_specialty_hospital_clarion-8fd16",
+      "hospital_page_url": "https://oria-data.trillianthealth.com/hospital/iowa_specialty_hospital_clarion-8fd16",
+      "duckdb_url": "https://oria-data.trillianthealth.com/data/20260109/completed/iowa_specialty_hospital_clarion-8fd16/iowa_specialty_hospital_clarion-8fd16_parsed.duckdb",
+      "selection_strategy": "rate_coverage",
+      "quoted_code_coverage": 1,
+      "selection_probe_count": 8,
+      "selection_probe_limit": 8,
+      "selection_probe_rank": 1,
+      "selection_stage_candidate_count": 86,
+      "drg_quote_count": 1,
+      "other_anchor_quote_count": 0,
+      "service_quote_count": 0,
+      "total_quote_count": 1,
+      "selection_score": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "geographic_stage": "same_state",
+      "specialty_filter_active": true,
+      "same_state_unfiltered_fallback_invoked": false
+    }
+  },
+  "payer_scenario": {
+    "scenario": "in_network",
+    "payer_name": "Blue Cross Blue Shield",
+    "insurance_coverage_ratio": 0.8
+  },
+  "diagnoses": [
+    {
+      "source_icd9_code": "82009",
+      "source_occurrences": [
+        {
+          "source_claim_type": "inpatient",
+          "source_claim_id": "196141177018320",
+          "source_field": "ADMTNG_ICD9_DGNS_CD",
+          "position": null
+        }
+      ],
+      "selected_icd10_code": "S72009A",
+      "icd10_mappings": [
+        {
+          "code": "S72009A",
+          "description": "Initial encounter for a closed fracture of an unspecified part of the right femoral neck (top of the thigh bone)."
+        }
+      ],
+      "description": "Initial encounter for a closed fracture of an unspecified part of the right femoral neck (top of the thigh bone)."
+    },
+    {
+      "source_icd9_code": "2851",
+      "source_occurrences": [
+        {
+          "source_claim_type": "inpatient",
+          "source_claim_id": "196141177018320",
+          "source_field": "ICD9_DGNS_CD_7",
+          "position": 7
+        }
+      ],
+      "selected_icd10_code": "D62",
+      "icd10_mappings": [
+        {
+          "code": "D62",
+          "description": "Severe anemia resulting from recent significant blood loss (acute post-hemorrhagic anemia)."
+        }
+      ],
+      "description": "Severe anemia resulting from recent significant blood loss (acute post-hemorrhagic anemia)."
+    },
+    {
+      "source_icd9_code": "E8889",
+      "source_occurrences": [
+        {
+          "source_claim_type": "inpatient",
+          "source_claim_id": "196141177018320",
+          "source_field": "ICD9_DGNS_CD_6",
+          "position": 6
+        }
+      ],
+      "selected_icd10_code": "W19XXXA",
+      "icd10_mappings": [
+        {
+          "code": "W19XXXA",
+          "description": "Initial medical visit after an accidental fall when the type of fall is not specified."
+        }
+      ],
+      "description": "Initial medical visit after an accidental fall when the type of fall is not specified."
+    }
+  ],
+  "bill_totals": {
+    "line_item_count": 1,
+    "billed_charge": 68986.37,
+    "contractual_adjustment": 15432.6,
+    "allowed_amount": 53553.77,
+    "insurance_paid": 42843.02,
+    "patient_responsibility": 10710.75
+  },
+  "provenance": {
+    "reference_sources": {
+      "ssa_fips": "https://data.nber.org/ssa-fips-state-county-crosswalk/2024/ssa_fips_state_county_2024.csv"
+    },
+    "date_shift": {
+      "applied": true,
+      "years": 11
+    },
+    "cluster_generation": {
+      "model": "openai:gpt-5-mini",
+      "primary_clinical_direction": "Repair/replacement for femoral neck (hip) fracture (inpatient total hip arthroplasty following fall)",
+      "clinical_direction_rationale": "ICD-9 femoral neck fracture and ICD-9 procedure for total hip replacement support an inpatient admission for hip arthroplasty after a fall; accompanying acute anemia is plausible perioperative/post-traumatic complication. Anchor facility billing (MS-DRG, revenue) is required for inpatient.",
+      "input_code_cluster": {
+        "diagnoses": [
+          {
+            "code_system": "ICD9",
+            "code": "82009",
+            "occurrence_count": 1,
+            "source_claim_types": [
+              "inpatient"
+            ]
+          },
+          {
+            "code_system": "ICD9",
+            "code": "71516",
+            "occurrence_count": 1,
+            "source_claim_types": [
+              "inpatient"
+            ]
+          },
+          {
+            "code_system": "ICD9",
+            "code": "V5867",
+            "occurrence_count": 1,
+            "source_claim_types": [
+              "inpatient"
+            ]
+          },
+          {
+            "code_system": "ICD9",
+            "code": "3899",
+            "occurrence_count": 1,
+            "source_claim_types": [
+              "inpatient"
+            ]
+          },
+          {
+            "code_system": "ICD9",
+            "code": "53081",
+            "occurrence_count": 1,
+            "source_claim_types": [
+              "inpatient"
+            ]
+          },
+          {
+            "code_system": "ICD9",
+            "code": "9974",
+            "occurrence_count": 1,
+            "source_claim_types": [
+              "inpatient"
+            ]
+          },
+          {
+            "code_system": "ICD9",
+            "code": "E8889",
+            "occurrence_count": 1,
+            "source_claim_types": [
+              "inpatient"
+            ]
+          },
+          {
+            "code_system": "ICD9",
+            "code": "2851",
+            "occurrence_count": 1,
+            "source_claim_types": [
+              "inpatient"
+            ]
+          },
+          {
+            "code_system": "ICD9",
+            "code": "2449",
+            "occurrence_count": 1,
+            "source_claim_types": [
+              "inpatient"
+            ]
+          },
+          {
+            "code_system": "ICD9",
+            "code": "6826",
+            "occurrence_count": 1,
+            "source_claim_types": [
+              "inpatient"
+            ]
+          }
+        ],
+        "procedures": [
+          {
+            "code_system": "ICD9_PROCEDURE",
+            "code": "8154",
+            "occurrence_count": 1,
+            "source_claim_types": [
+              "inpatient"
+            ]
+          },
+          {
+            "code_system": "ICD9_PROCEDURE",
+            "code": "2851",
+            "occurrence_count": 1,
+            "source_claim_types": [
+              "inpatient"
+            ]
+          }
+        ]
+      },
+      "retained_input_codes": [
+        {
+          "code_system": "ICD9",
+          "code": "82009",
+          "reason": "Femoral neck fracture \u2014 primary pathology consistent with inpatient hip repair/replacement",
+          "occurrence_count": 1,
+          "source_claim_types": [
+            "inpatient"
+          ]
+        },
+        {
+          "code_system": "ICD9",
+          "code": "E8889",
+          "reason": "Accidental fall \u2014 plausible mechanism of injury leading to hip fracture",
+          "occurrence_count": 1,
+          "source_claim_types": [
+            "inpatient"
+          ]
+        },
+        {
+          "code_system": "ICD9",
+          "code": "2851",
+          "reason": "Acute posthemorrhagic anemia \u2014 plausible perioperative/post-traumatic complication",
+          "occurrence_count": 1,
+          "source_claim_types": [
+            "inpatient"
+          ]
+        },
+        {
+          "code_system": "ICD9_PROCEDURE",
+          "code": "8154",
+          "reason": "ICD-9 procedure 81.54 = total hip replacement \u2014 matches surgical treatment for femoral neck fracture",
+          "occurrence_count": 1,
+          "source_claim_types": [
+            "inpatient"
+          ]
+        }
+      ],
+      "filtered_input_codes": [
+        {
+          "code_system": "ICD9",
+          "code": "71516",
+          "reason": "Osteoarthritis code of knee/hip area but not necessary to support acute fracture + arthroplasty narrative; removed as noise",
+          "occurrence_count": 1,
+          "source_claim_types": [
+            "inpatient"
+          ]
+        },
+        {
+          "code_system": "ICD9",
+          "code": "V5867",
+          "reason": "Long-term (feeding) device code not consistent with hip-fracture surgical admission",
+          "occurrence_count": 1,
+          "source_claim_types": [
+            "inpatient"
+          ]
+        },
+        {
+          "code_system": "ICD9",
+          "code": "3899",
+          "reason": "Hearing loss unrelated to orthopedic inpatient hip repair",
+          "occurrence_count": 1,
+          "source_claim_types": [
+            "inpatient"
+          ]
+        },
+        {
+          "code_system": "ICD9",
+          "code": "53081",
+          "reason": "Esophageal reflux unrelated to primary orthopedic problem",
+          "occurrence_count": 1,
+          "source_claim_types": [
+            "inpatient"
+          ]
+        },
+        {
+          "code_system": "ICD9",
+          "code": "9974",
+          "reason": "Postoperative complication code ambiguous; not retained because specific anemia code retained",
+          "occurrence_count": 1,
+          "source_claim_types": [
+            "inpatient"
+          ]
+        },
+        {
+          "code_system": "ICD9",
+          "code": "2449",
+          "reason": "Hypothyroidism unrelated to acute inpatient hip fracture admission",
+          "occurrence_count": 1,
+          "source_claim_types": [
+            "inpatient"
+          ]
+        },
+        {
+          "code_system": "ICD9",
+          "code": "6826",
+          "reason": "Cellulitis of leg not consistent with primary hip fracture/arthroplasty direction",
+          "occurrence_count": 1,
+          "source_claim_types": [
+            "inpatient"
+          ]
+        },
+        {
+          "code_system": "ICD9_PROCEDURE",
+          "code": "2851",
+          "reason": "Procedure code duplicate of an ICD-9 diagnosis numeric string; not a supported operative procedure for hip arthroplasty",
+          "occurrence_count": 1,
+          "source_claim_types": [
+            "inpatient"
+          ]
+        }
+      ],
+      "generated_cluster": {
+        "diagnosis_codes": [
+          "S72009A",
+          "D62",
+          "W19XXXA"
+        ],
+        "billing_codes": [
+          "470",
+          "27130",
+          "0270"
+        ],
+        "augmented_diagnosis_codes": [],
+        "augmented_billing_codes": [
+          "470",
+          "27130",
+          "0270"
+        ]
+      }
+    },
+    "trilliant_schema": {
+      "hospital_table": "public_search_index",
+      "rate_table": "standard_charge_details",
+      "hospital_name_column": "hospital_name",
+      "hospital_npi_column": null,
+      "hospital_zip_column": "hospital_zip",
+      "hospital_state_column": "hospital_state",
+      "hospital_county_name_column": "hospital_county_name",
+      "hospital_county_fips_column": "hospital_county_fips",
+      "hospital_address_columns": [
+        "hospital_address"
+      ],
+      "hospital_identity_columns": [
+        "hospital_directory_id"
+      ],
+      "rate_billing_code_column": "billing_code",
+      "rate_payer_column": "payer_name",
+      "rate_negotiated_rate_column": "estimated_amount",
+      "rate_gross_charge_column": "gross_charge",
+      "rate_state_column": null,
+      "rate_identity_columns": [
+        "hospital_directory_id"
+      ],
+      "source_mode": "public_directory",
+      "rate_code_columns": [
+        "cpt",
+        "hcpcs"
+      ],
+      "rate_description_column": "description",
+      "rate_standard_dollar_column": "standard_charge_dollar",
+      "rate_percentage_column": "standard_charge_percentage",
+      "rate_estimated_amount_column": "estimated_amount",
+      "rate_minimum_column": "minimum",
+      "rate_maximum_column": "maximum",
+      "rate_median_amount_column": "median_amount"
+    },
+    "pricing": {
+      "billed_charge_multiplier": 1.35,
+      "source_medicare_multiplier": 2.5,
+      "max_quote_amount": 10000000.0,
+      "rate_cache_hits": 0,
+      "rate_cache_misses": 2,
+      "trilliant_source_mode": "public_directory"
+    }
+  },
+  "admission": {
+    "hospital": "Iowa Specialty Hospital Clarion",
+    "admission_date": "2021-10-03",
+    "discharge_date": "2021-10-07",
+    "length_of_stay": 4,
+    "drg": {
+      "code": "470",
+      "description": "MAJOR HIP AND KNEE JOINT REPLACEMENT OR REATTACHMENT OF LOWER EXTREMITY WITHOUT MCC",
+      "code_system": "MS-DRG"
+    }
+  },
+  "facility_claim": {
+    "claim_id": "196141177018320",
+    "claim_class": "facility",
+    "payment_basis": "drg",
+    "billing_provider": {
+      "hospital_name": "Iowa Specialty Hospital Clarion",
+      "npi": null
+    },
+    "charge_lines": [],
+    "payment_components": [
+      {
+        "component_id": "C702A3D7566EB137-inpatient-196141177018320-component-1",
+        "component_type": "ms_drg",
+        "billing_code": "470",
+        "code_system": "MS-DRG",
+        "description": "Hospital stay for major lower\u2011extremity joint replacement or reattachment when there are no major complications or comorbid conditions.",
+        "linked_line_ids": [],
+        "service_date": "2021-10-03",
+        "impact_group_id": "C702A3D7566EB137-inpatient-196141177018320-component-1",
+        "source_claim_type": "inpatient",
+        "source_claim_id": "196141177018320",
+        "source_field": "ENCOUNTER_ANCHOR_CLAIM",
+        "source_line_number": null,
+        "pricing_provenance": {
+          "lookup_level": "hospital_average",
+          "payer_name": "Blue Cross Blue Shield",
+          "row_count": 10,
+          "identity_filter": null,
+          "state_value": null,
+          "baseline_amount": null,
+          "source_allowed_amount": null,
+          "floor_amount": null,
+          "floor_applied": null,
+          "source_observed_field": null,
+          "hospital_count": null,
+          "supporting_row_count": null,
+          "prior_lookup_scope": null,
+          "prior_hospital_scan_count": null,
+          "prior_hospital_scan_cap": null,
+          "prior_cache_status": null,
+          "estimate_basis": null,
+          "estimate_support_line_count": null,
+          "estimate_charge_field": null,
+          "estimate_ratio": null,
+          "estimate_scope": null,
+          "estimate_source_hospital_id": null,
+          "estimate_source_hospital_name": null,
+          "estimate_source_lookup_level": null
+        },
+        "accounting": {
+          "billed_charge": 49917.87,
+          "contractual_adjustment": 11231.51,
+          "allowed_amount": 38686.36,
+          "insurance_paid": 30949.09,
+          "patient_responsibility": 7737.27
+        }
+      }
+    ],
+    "claim_totals": {
+      "line_item_count": 0,
+      "billed_charge": 49917.87,
+      "contractual_adjustment": 11231.51,
+      "allowed_amount": 38686.36,
+      "insurance_paid": 30949.09,
+      "patient_responsibility": 7737.27,
+      "component_count": 1
+    },
+    "drg": {
+      "code": "470",
+      "description": "MAJOR HIP AND KNEE JOINT REPLACEMENT OR REATTACHMENT OF LOWER EXTREMITY WITHOUT MCC",
+      "code_system": "MS-DRG"
+    }
+  },
+  "professional_claims": [
+    {
+      "claim_id": "196141177018320",
+      "claim_class": "professional",
+      "claim_type": "carrier",
+      "lines": [
+        {
+          "line_id": "C702A3D7566EB137-inpatient-196141177018320-line-1",
+          "billing_code": "27130",
+          "code_system": "HCPCS/CPT",
+          "description": "PARTIAL HIP REPLACEMENT",
+          "service_date": "2021-10-03",
+          "quantity": 1,
+          "support_status": "raw_supported",
+          "billing_side_hint": "professional",
+          "claim_class": "carrier",
+          "source_claim_type": "carrier",
+          "raw_source_claim_type": "inpatient",
+          "source_claim_id": "196141177018320",
+          "source_field": "ICD9_PRCDR_CD_1",
+          "source_line_number": null,
+          "pricing_provenance": {
+            "lookup_level": "cached_corpus_quote",
+            "payer_name": null,
+            "row_count": 6,
+            "identity_filter": null,
+            "state_value": null,
+            "baseline_amount": 14867.41,
+            "source_allowed_amount": null,
+            "floor_amount": null,
+            "floor_applied": null,
+            "source_observed_field": null,
+            "hospital_count": null,
+            "supporting_row_count": null,
+            "prior_lookup_scope": null,
+            "prior_hospital_scan_count": null,
+            "prior_hospital_scan_cap": null,
+            "prior_cache_status": null,
+            "estimate_basis": "cached_family_median",
+            "estimate_support_line_count": 6,
+            "estimate_charge_field": null,
+            "estimate_ratio": null,
+            "estimate_scope": "national",
+            "estimate_source_hospital_id": null,
+            "estimate_source_hospital_name": null,
+            "estimate_source_lookup_level": "cached_corpus"
+          },
+          "accounting": {
+            "billed_charge": 19068.5,
+            "contractual_adjustment": 4201.09,
+            "allowed_amount": 14867.41,
+            "insurance_paid": 11893.93,
+            "patient_responsibility": 2973.48
+          },
+          "impact_group_id": "C702A3D7566EB137-inpatient-196141177018320-line-1"
+        }
+      ],
+      "claim_totals": {
+        "line_item_count": 1,
+        "billed_charge": 19068.5,
+        "contractual_adjustment": 4201.09,
+        "allowed_amount": 14867.41,
+        "insurance_paid": 11893.93,
+        "patient_responsibility": 2973.48,
+        "component_count": 0
+      }
+    }
+  ],
+  "evaluation_metadata": {
+    "label": "negative",
+    "error_category": null,
+    "error_explanation": null,
+    "disputed_amount": 0.0,
+    "disputed_amount_basis": null,
+    "assignment_weight": 0.0,
+    "assignment_result": "negative",
+    "downgrade_reason": null,
+    "affected_line_ids": [],
+    "affected_component_ids": [],
+    "affected_target_ids": [],
+    "affected_impact_group_ids": []
+  }
+}

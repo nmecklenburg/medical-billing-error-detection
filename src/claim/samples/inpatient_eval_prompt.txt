@@ -1,0 +1,187 @@
+# Evaluation Task
+
+Review the after-care visit summary and the bill side by side. Decide which billed items, if any, should be disputed.
+
+## Side-By-Side Record
+
+### After-Care Visit Summary
+```json
+{
+  "diagnoses": [
+    "Closed fracture of the right femoral neck (initial encounter)",
+    "Acute post-hemorrhagic anemia (severe anemia after recent blood loss)",
+    "Initial visit following an accidental fall"
+  ],
+  "document_title": "After-Visit Summary \u2014 Partial Hip Replacement (Inpatient)",
+  "encounter_overview": "You were admitted to Iowa Specialty Hospital Clarion from 2021-10-03 to 2021-10-07 for treatment of a broken right femoral neck (top of the thigh bone). During this stay you had a partial hip replacement. You also had anemia related to recent blood loss that was managed while you were in the hospital. Your hospital stay was uncomplicated and you are being discharged home with instructions to support healing and recovery.",
+  "follow_up_actions": [
+    "Orthopedic surgeon appointment: Schedule follow-up with your surgeon within 1\u20132 weeks after discharge (or sooner if instructed).",
+    "Primary care follow-up: See your primary care provider for ongoing management of anemia and overall recovery as directed.",
+    "Physical therapy: Attend outpatient physical therapy or follow the home exercise program given by your therapist to regain strength and mobility.",
+    "Wound check: Have your incision inspected at the first postoperative visit or sooner if you notice problems.",
+    "Medication review: Review all prescriptions and any new medications with your pharmacist or provider if you have questions or side effects."
+  ],
+  "home_care_instructions": [
+    "Activity: Follow weight-bearing and activity instructions given by your surgeon and physical therapist. Use any recommended walking aids (walker, crutches) until your provider says it is safe to progress.",
+    "Wound care: Keep the incision clean and dry. Follow the specific dressing change instructions you were given. Do not soak the incision (no baths or swimming) until cleared by your surgeon.",
+    "Medication: Take all prescribed medicines exactly as directed. This may include pain medicine, and any medicines to help with anemia or prevent infection or blood clots. If you were given new medicines, follow the written medication list you received.",
+    "Pain control: Use your prescribed pain medicines as directed. Ice the area (if advised) for short periods to help with swelling and discomfort.",
+    "Blood clot prevention: Follow instructions for blood clot prevention, which may include taking prescribed blood thinner, doing ankle pumps and leg exercises, wearing compression stockings, and walking regularly as tolerated.",
+    "Diet and hydration: Eat a balanced diet and drink plenty of fluids. If your provider prescribed iron, vitamins, or other supplements for anemia, take them as directed.",
+    "Rest and gradual return to activities: Plan for gradual increases in activity. Avoid heavy lifting, twisting, or strenuous activity until your surgeon clears you.",
+    "Home safety: Make your home safe to prevent falls\u2014remove loose rugs, keep pathways clear, and have items you use often within reach."
+  ],
+  "services_received": [
+    "Partial (hemi) hip replacement surgery on 2021-10-03",
+    "Inpatient medical care and monitoring for anemia and recovery",
+    "Postoperative nursing care, wound care, and physical therapy evaluation"
+  ],
+  "warning_signs": [
+    "Fever of 100.4\u00b0F (38\u00b0C) or higher, or chills",
+    "Increasing redness, swelling, warmth, or foul-smelling drainage from the surgical incision",
+    "Sudden increase in pain not relieved by your prescribed pain medicine",
+    "New numbness or weakness in your leg or foot",
+    "Shortness of breath, chest pain, rapid heartbeat, or coughing up blood (seek emergency care immediately)",
+    "Sudden lightheadedness, fainting, or severe weakness",
+    "Excessive bleeding or signs of new or worsening anemia such as extreme tiredness, dizziness, or paler skin"
+  ]
+}
+```
+
+### Billing Information
+```json
+{
+  "admission": {
+    "admission_date": "2021-10-03",
+    "discharge_date": "2021-10-07",
+    "drg": {
+      "code": "470",
+      "code_system": "MS-DRG",
+      "description": "MAJOR HIP AND KNEE JOINT REPLACEMENT OR REATTACHMENT OF LOWER EXTREMITY WITHOUT MCC"
+    },
+    "hospital": "Iowa Specialty Hospital Clarion",
+    "length_of_stay": 4
+  },
+  "bill_totals": {
+    "allowed_amount": 53553.77,
+    "billed_charge": 68986.37,
+    "contractual_adjustment": 15432.6,
+    "insurance_paid": 42843.02,
+    "line_item_count": 1,
+    "patient_responsibility": 10710.75
+  },
+  "case_id": "C702A3D7566EB137-inpatient-196141177018320",
+  "diagnoses": [
+    {
+      "description": "Initial encounter for a closed fracture of an unspecified part of the right femoral neck (top of the thigh bone).",
+      "selected_icd10_code": "S72009A"
+    },
+    {
+      "description": "Severe anemia resulting from recent significant blood loss (acute post-hemorrhagic anemia).",
+      "selected_icd10_code": "D62"
+    },
+    {
+      "description": "Initial medical visit after an accidental fall when the type of fall is not specified.",
+      "selected_icd10_code": "W19XXXA"
+    }
+  ],
+  "encounter_regime": "inpatient",
+  "facility_claim": {
+    "billing_provider": {
+      "hospital_name": "Iowa Specialty Hospital Clarion",
+      "npi": null
+    },
+    "charge_lines": [],
+    "claim_class": "facility",
+    "claim_id": "196141177018320",
+    "claim_totals": {
+      "allowed_amount": 38686.36,
+      "billed_charge": 49917.87,
+      "component_count": 1,
+      "contractual_adjustment": 11231.51,
+      "insurance_paid": 30949.09,
+      "line_item_count": 0,
+      "patient_responsibility": 7737.27
+    },
+    "drg": {
+      "code": "470",
+      "code_system": "MS-DRG",
+      "description": "MAJOR HIP AND KNEE JOINT REPLACEMENT OR REATTACHMENT OF LOWER EXTREMITY WITHOUT MCC"
+    },
+    "payment_basis": "drg",
+    "payment_components": [
+      {
+        "accounting": {
+          "allowed_amount": 38686.36,
+          "billed_charge": 49917.87,
+          "insurance_paid": 30949.09,
+          "patient_responsibility": 7737.27
+        },
+        "billing_code": "470",
+        "code_system": "MS-DRG",
+        "component_id": "C1",
+        "component_type": "ms_drg",
+        "description": "Hospital stay for major lower\u2011extremity joint replacement or reattachment when there are no major complications or comorbid conditions.",
+        "linked_line_ids": [],
+        "service_date": "2021-10-03"
+      }
+    ]
+  },
+  "patient": {
+    "age_at_encounter": 43,
+    "birth_date": "1978-08-01",
+    "county_fips": "19061",
+    "county_name": "DUBUQUE",
+    "desynpuf_id": "C702A3D7566EB137",
+    "race_code": "1",
+    "sex_code": "2",
+    "state_abbrev": "IA",
+    "state_name": "IOWA"
+  },
+  "payer_scenario": {
+    "insurance_coverage_ratio": 0.8,
+    "payer_name": "Blue Cross Blue Shield",
+    "scenario": "in_network"
+  },
+  "professional_claims": [
+    {
+      "claim_class": "professional",
+      "claim_id": "196141177018320",
+      "claim_totals": {
+        "allowed_amount": 14867.41,
+        "billed_charge": 19068.5,
+        "component_count": 0,
+        "contractual_adjustment": 4201.09,
+        "insurance_paid": 11893.93,
+        "line_item_count": 1,
+        "patient_responsibility": 2973.48
+      },
+      "claim_type": "carrier",
+      "lines": [
+        {
+          "accounting": {
+            "allowed_amount": 14867.41,
+            "billed_charge": 19068.5,
+            "insurance_paid": 11893.93,
+            "patient_responsibility": 2973.48
+          },
+          "billing_code": "27130",
+          "code_system": "HCPCS/CPT",
+          "description": "PARTIAL HIP REPLACEMENT",
+          "line_id": "1",
+          "quantity": 1,
+          "service_date": "2021-10-03"
+        }
+      ]
+    }
+  ]
+}
+```
+
+## Instructions
+- Focus on whether the bill conflicts with the care actually documented in the after-care summary or contains billing behavior that should be disputed.
+- If no billed items should be disputed, return an empty `disputed_items` list and explain briefly why.
+- If the bill should be disputed but the issue applies to the whole bill or patient identity rather than a specific billed item, return `summary_decision` as `dispute` with an empty `disputed_items` list.
+- If billed items should be disputed, include only valid `item_id` values that appear in the bill.
+- Explanations should be concise and specific to the disputed items.
+- Do not mention hidden labels, benchmark metadata, or ground-truth categories.

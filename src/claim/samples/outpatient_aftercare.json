@@ -1,0 +1,37 @@
+{
+  "case_id": "10E9296B40406771-outpatient-542172280982181",
+  "generated_at": "2026-05-04T18:13:20Z",
+  "model": "openai:gpt-5-mini",
+  "summary": {
+    "document_title": "After-Visit Summary \u2014 Outpatient Visit (Knee Osteoarthritis)",
+    "encounter_overview": "You were seen on 2019-12-27 at Baylor Scott & White Medical Center - Frisco (outpatient visit). This visit addressed knee osteoarthritis (wear-and-tear arthritis). A routine blood draw was also performed.",
+    "diagnoses": [
+      "Osteoarthritis (degenerative 'wear-and-tear' arthritis) of the knee, unspecified side or type"
+    ],
+    "services_received": [
+      "Outpatient urgent/established patient visit (level 2)",
+      "Routine blood draw (venipuncture) for laboratory testing"
+    ],
+    "home_care_instructions": [
+      "Activity: Balance rest with gentle activity. Avoid heavy kneeling or squatting and stop activities that make knee pain worse.",
+      "Exercise: Try low-impact exercises such as walking, swimming, or stationary biking. Gentle knee strengthening and stretching exercises can help. Consider a physical therapy referral if recommended.",
+      "Weight: If overweight, gradual weight loss can reduce stress on the knee and improve symptoms.",
+      "Pain control: Use over-the-counter pain relievers (such as acetaminophen or an NSAID) as directed on the label, unless you have been told otherwise by a clinician. Apply a warm pack for stiffness or a cold pack for swelling for 10\u201320 minutes as needed.",
+      "Support: A knee brace, sleeve, or cane may help with stability and reduce pain during walking. Use as recommended.",
+      "Blood draw care: Keep the bandage on for at least 1 hour. If bleeding occurs, apply firm pressure for 10 minutes. Keep the area clean and dry; remove the bandage after a few hours and watch for redness or swelling."
+    ],
+    "follow_up_actions": [
+      "Follow up with your primary care provider or an orthopedist as advised to review treatment options and whether physical therapy, injections, or imaging are needed.",
+      "Expect lab results to be available to your ordering provider; contact the clinic if you do not hear results within the time frame they provided.",
+      "Schedule a follow-up appointment if symptoms do not improve with home care or if you need further evaluation or treatments."
+    ],
+    "warning_signs": [
+      "Increasing or severe knee pain that does not respond to home measures",
+      "New or increasing swelling, warmth, redness, or tenderness in the knee",
+      "Fever or chills (possible sign of infection)",
+      "Sudden inability to bear weight on the leg or a change in leg alignment",
+      "Signs of infection at the blood draw site: increasing redness, swelling, pus, or persistent bleeding",
+      "New calf pain, swelling, or shortness of breath (seek immediate care)"
+    ]
+  }
+}
