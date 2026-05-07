@@ -26,6 +26,7 @@ class EvaluationRunConfig:
     checkpoint_path: Path
     limit: int | None
     model_specs: tuple[ModelSpec, ...]
+    openrouter_provider: str | None
     judge_model: str
     reasoning_effort: str
     timeout_seconds: float
