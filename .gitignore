@@ -4,6 +4,8 @@ __pycache__/
 *.egg-info/
 .pytest_cache/
 .mypy_cache/
+.ipynb_checkpoints/
+*.ipynb
 build/
 dist/
 outputs/
@@ -13,3 +15,8 @@ quarantine/
 .idea/*
 *.png
 *.pdf
+scripts/calculate_encounter_total_quantiles.py
+scripts/crypt_dataset_rich_text.py
+scripts/plot_category_item_f1_heatmap.py
+scripts/plot_v1_eval_metrics.py
+scripts/rewrite_v31_deprecated_categories.py
